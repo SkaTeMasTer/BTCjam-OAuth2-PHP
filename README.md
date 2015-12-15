@@ -56,5 +56,6 @@ Depending on how your app is structured you can use this callback in a number of
 
 + (Google Developers OAuth2 Protocol)[https://developers.google.com/identity/protocols/OAuth2]
 + (Wordpress Developers OAuth2 docs)[https://developer.wordpress.com/docs/oauth2/]
++ (MSDN: Server Side OAuth Authentication in PHP)[https://msdn.microsoft.com/en-us/library/dn632721.aspx]
 + (Oz as Auth2 replacement)[http://hueniverse.com/2015/09/19/auth-to-see-the-wizard-or-i-wrote-an-oauth-replacement/]
 + (oauth3.net)[http://oauth.net]
