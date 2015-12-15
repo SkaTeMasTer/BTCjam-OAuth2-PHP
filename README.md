@@ -31,10 +31,13 @@ Some issues include:
 # Getting Started...
 
 ### Creating your web application credentials
-All web applications that use OAuth2 must have credentials that identify the application to the OAuth2 server. To obtain web application credentials for your project, complete these steps:
-Visit the web site of the API provider and open the (API Settings page)[https://btcjam.com/oauth/applications].
-Enter a name for this endpoint. (anything is fine)
-Enter a Redirect URI, which handles responses from the OAuth2 server.
+All web applications that use OAuth2 must have credentials that identify the application to the OAuth2 server. 
+
+To obtain web application credentials for your project, complete these steps:
+
+   1. Visit the web site of the API provider and open the (API Settings page)[https://btcjam.com/oauth/applications].
+   2. Enter a name for this endpoint. (anything is fine)
+   3. Enter a Redirect URI, which handles responses from the OAuth2 server.
  
 ### Loading the Auth2 client library via the callback URL
 Depending on how your app is structured you can use this callback in a number of ways, including:
@@ -46,6 +49,7 @@ Depending on how your app is structured you can use this callback in a number of
 
 
 ### Using OAuth2 for Web Server Applications
+,,,
 
 ### References
 
