@@ -33,6 +33,8 @@ $goToUrl = $apiConfig['authorizationUrlBase'] . '?' . http_build_query($queryPar
 
 <div style="padding:80px;vertical-align:middle;align:center;background:lightgrey;width:400px;font-family:Verdana">
 
+<img src="http://cdn.auth0.com/samples/auth0_logo_final_blue_RGB.png" width="200" height="49"/>
+
 <h1>BTCjam-OAuth2-PHP</h1><h2>"My Test App"</h2><br />
 
 <h3>Please click the 'start' button to begin the OAuth2 dance.</h3><br /><br />
