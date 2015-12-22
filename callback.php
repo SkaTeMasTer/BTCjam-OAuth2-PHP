@@ -43,20 +43,18 @@ if ((! is_numeric($state)) || ($state != $_SESSION['state']))
 if(isset($responseArray['access_token'])) {
 												// response contained an access_token element, request was successful.
 
-			$accessToken = $responseArray['access_token'];
-			$refreshToken = $responseArray['refresh_token'];
+	 // *** $responseArray contains: "access_token", "token_type", "scope", "created_at" -- missing "refresh_token"?
 
+			// $refreshToken = $responseArray['refresh_token'];
+  		        // $_SESSION['refresh_token'] = $refreshToken;
 
-			$_SESSION['access_token'] = $accessToken;
+		     $accessToken = $responseArray['access_token'];
 
-			// We are just storing refresh token in the session state var, and using approval_prompt=force for simplicity. 
-			// Typically and ideally the fresh token would be stored in a server-side database or server cache file.
-			// This would eliminate the need for prompting the user for approval each time.
-			$_SESSION['refresh_token'] = $refreshToken;
+	             $_SESSION['access_token'] = $accessToken;
 
+	
 
-// we are authorized and have been granted all permissions, the OAuth2 dance is complete.
-// redirect to new URL
+// redirect to clean URL
 header('Location: ./get_data.php');
 
 } else {    
