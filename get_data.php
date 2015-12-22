@@ -20,14 +20,13 @@ if (isset($_SESSION) && !empty($_SESSION['access_token'])) {
         	$accessToken = $_SESSION['access_token'];
 
 } else {
-
 			 /* no valid access token available, go to authorization server */
 				   
-			 //header('HTTP/1.1 302 Found');
-			 header('Location: '. $apiConfig['authorizationUrlBase']);
-			 exit;
-				//	die("<p>Sorry, no access token found or our SESSION has expired.</p>\n");
-
+			 // header('HTTP/1.1 302 Found');
+			 // header('Location: '. $apiConfig['authorizationUrlBase']);
+			 // exit;
+			 
+			die("<p>Sorry, no access token found or our SESSION has expired.</p>\n");
 }
 
 
