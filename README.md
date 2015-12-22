@@ -2,14 +2,6 @@
 > A basic OAuth2 protocol wrapper in PHP for the cryptocurrency lending platform BTCjam.
 
 
-______________________________      __                    _____ __________.___ 
-\______   \__    ___/\_   ___ \    |__|____    _____     /  _  \\______   \   |
- |    |  _/ |    |   /    \  \/    |  \__  \  /     \   /  /_\  \|     ___/   |
- |    |   \ |    |   \     \____   |  |/ __ \|  Y Y  \ /    |    \    |   |   |
- |______  / |____|    \______  /\__|  (____  /__|_|  / \____|__  /____|   |___|
-        \/                   \/\______|    \/      \/          \/              
-
-
 ### BETA TESTING
 This is still in test phase.  Although, it works 100% fine.
 
