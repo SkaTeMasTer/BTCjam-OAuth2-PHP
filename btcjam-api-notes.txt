@@ -1,0 +1,177 @@
+
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888887+IO888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888IO8888888888888888888888888888888888888888888888888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+8888888888888+=~~~=?88$======~+O88$?:,:~O88888888888888O88888888888888888888888888888888888888888888
+8888888888888...~~,.,ZI,,.....~O8...,::.888$?+O8888O8+++=IOO8888887788888O8888887$OO8888888888888888
+8888888888888...Z8Z,.I888I.:O8OZ,.:Z888OO88?+78888O?+O88??O8888888??O8Z?++7O88ZI++7O8888888888888888
+8888888888888...::..78888I.:O88+.,Z88888888++$8888++Z888?7888888O7+788++Z=?O8$+?7+I88888878O88888888
+8888888888888...~~,.:$888I.:O88=.:O88888888++$8887IOO88Z+Z888887+?+Z8778O??ZZ+78Z+?88887+IO888888888
+8888888888888...Z8O=.:O88I.:O887..+88888888++788$+O888$++IOOO$I7ZZ?Z?+O88?+$?$88O?+8OZ?IOO8888888888
+8888888888888...77+..+888I.:O888I...+I?=O88++788I=8O8+?$7++++?I8O7++?Z888I++78888$++++Z8888888888888
+8888888888888,.....:ZO888I.:Z8888I~,....888++$O8$++++Z8888ZZ88888$+?Z8888OI7O88888OZO888888888888888
+8888888888888888888888888888888888888888888++$888Z$O88888888888888O888888888888888888888888888888888
+8888888888888888888888888888888888888888888+?OO88888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888O888O+78888888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888$?+++ZOO888888888888888888888888888888888888888888888888888888
+88888888888888888888888888888888888888888888888888888888888888888888888888888    888     888--888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888  88  88  88  88==888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888  /\  88     888  888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888  88  88  888888  888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888  88  88  888888  888888
+8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+
+     +----------------------------------------------------------------------------------+
+     | BTCjam's API Guide                                                               |
+     +----------------------------------------------------------------------------------+
+     |                                                                                  |     
+     | + SOURCE: https://github.com/SkaTeMasTer/BTCjam-OAuth2-PHP/                      |
+     |                                                                                  |
+     | + Written by: Shawn Reimerdes   (Leech Software, Inc.)                           |
+     |                                                                                  |     
+     | + First version released on: Dec-21-2015                                         |       
+     |                                                                                  |     
+     |----------------------------------------------------------------------------------|  
+     |                                                                                  |     
+     |  This README is for documentation about BTCjam.com API, which uses OAuth 2.0.    |      
+     |                                                                                  |     
+     |  There are a lot of API calls you can make that return many items of data.       |
+     |  The purpose of this doc is to make it easier to reference when you are coding.  |     
+     |                                                                                  | 
+     |  The original API FAQ is at: https://btcjam.com/faq/api                          |
+     |                                                                                  |                          
+     +----------------------------------------------------------------------------------+
+
+
+
+BTCJAM API - PUBLIC ENDPOINTS:  (no authentication necessary)
+=============================================================================
+
+[GET] https://btcjam.com/api/v1/listings?appid=[APP ID]&secret=[APP Secret]
+Query the current listings open for investment  
+
+[GET] https://btcjam.com/nationalid_types.json  
+National Document Types 
+
+[GET] https://btcjam.com/employment_statuses.json 
+Employment Statuses 
+
+[GET] https://btcjam.com/currencies.json
+Currencies  
+
+[GET] https://btcjam.com/payment_types.json 
+Payment Types   
+
+[GET] https://btcjam.com/automatic_plan_templates.json
+Automatic Plan Templates    
+
+
+
+BTCJAM API - PRIVATE ENDPOINTS:  (OAuth2 authentication necessary)
+=============================================================================
+
+[GET] /api/v1/me
+User Profile    
+
+
+
+
+
+
+
+____________________________________________________________________
+
+EXAMPLE OUTPUT:
+
+
+ENDPOINT * [GET] /api/v1/me
+-------------------------------------------------
+
+    [user] => Array
+        (
+            [id] => 1542
+            [alias] => SkaTeMasTer
+            [email] => shawn_noreturn@gmail.com
+            [name] => Shawn Reimerdes
+            [country] => US
+            [positive_count_reputation] => 3
+            [negative_count_reputation] => 0
+            [positive_percentage_reputation] => 100
+            [can_borrow] => 
+            [can_trade] => 1
+            [btcjam_country_id] => 234
+            [notifications_opt_in] => 1
+            [reminders_opt_in] => 1
+            [newsletter_opt_in] => 
+            [push_notifications_opt_in] => 
+            [display_currency_id] => 7
+            [automatic_payments] => 1
+            [bitcointalk_account_verified] => 
+            [credit_score] => C-
+            [address_verified] => 
+            [identity_verified] => 
+            [income_verified] => 
+            [phone_verified] => 1
+            [must_retype_email] => 
+            [email_confirmed_at] => 1412984631
+            [avatar_url] => https://btcjam.s3.amazonaws.com/users/avatars/1542_MIA-SCR-PIC1.original.jpg?1448943037
+            [comment_email_strategy] => 1
+            [balance] => 0.13114359
+            [btcjam_score_numeric] => 0.57142857
+            [btcjam_score] => B+
+            [localbitcoins_connected] => 1
+            [facebook_connected] => 1
+            [mercadolibre_connected] => 
+            [facebook_friend_count] => 144
+            [linkedin_connected] => 1
+            [ebay_connected] => 1
+            [ebay_account_date] => 2013-12-12
+            [ebay_feedback_score] => 17
+            [paypal_verified_account_connected] => 1
+            [paypal_account_date] => 2012-07-19
+            [twitter_connected] => 1
+            [google_connected] => 1
+            [google_extended_connected] => 1
+            [repaid_loans_count] => 0
+            [repaid_loans_amount] => 0
+            [late_loans_count] => 0
+            [late_loans_amount] => 0
+            [open_credit_lines_count] => 0
+            [open_credit_lines_amount] => 0
+            [made_late_payments_count] => 0
+            [two_factor_enabled] => 
+            [withdraw_two_factor] => 1000000
+            [deposit_address] => 1GYtxLscMXuopqwL82YwP5paHCjnaehnC4
+            [loan_limit_minimum] => 0.23079712
+            [loan_limit_maximum] => 45.245376
+            [withdraw_address] => 1ghgfhfhfghfghfhzXDaHj
+            [flow_intention] => Create AutoInvest Plan
+            [identity] => Array
+                (
+                )
+
+            [address] => Array
+                (
+                )
+
+            [credit] => Array
+                (
+                )
+
+        )
+
+-------------------------------------------------
+
+
+
+____________________________________________________________________
+
+
+
+
