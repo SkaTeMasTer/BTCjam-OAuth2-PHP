@@ -2,17 +2,16 @@
 > A basic OAuth2 protocol wrapper in PHP for the cryptocurrency lending platform BTCjam.
 
 ### BETA TESTING
-This is still in test phase.  Do not use for production yet...
-Contributors are NEEDED, please add your two-cents.
+This is still in test phase.  Although, it works 100% fine.
+
+Contributors are welcome!  I'm happy to commit changes...
 
 ### About
 This is a simpler sub-set implementation of the [The OAuth 2.0 Authorization Protocol](http://tools.ietf.org/id/draft-ietf-oauth-v2-22.html).  Not all features added, since we don't need them for most APIs.
 
-Today, there are a lot of sites that use an API to allow their users to access their data programmatically. The problem is that most are not 100% pure Auth2 specification, they have a slightly modified implementation that can be fickle to deal with.  
+Most of the OAuth2 libraries are bloated and include too many files with very detailed, feature-rich and complex classes, much of which is way beyond the scope and requirements for your more simple custom web application.  
 
-Most of the libraries include too many files with very detailed, feature-rich and complex classes, much of which is way beyond the scope and requirements for your more simple custom web application.  
-
-A more lightweight, application specific, protocol wrapper can be useful in some situations.  
+What you need sometimes is just a more lightweight, protocol wrapper can be useful in some situations.  
 
 ### What is BTCjam?
 
@@ -58,16 +57,17 @@ Depending on how your app is structured you can use this callback in a number of
 
 
 ### History
-Dec-15-2015: init repo. 
++ Dec-21-2015: v1.00 released. 
++ Dec-15-2015: init repo. 
 
 
 ### References
 
 
 + [Google Developers OAuth2 Protocol](https://developers.google.com/identity/protocols/OAuth2)
-+ [Wordpress Developers OAuth2 docs](https://developer.wordpress.com/docs/oauth2/)
 + [MSDN: Server Side OAuth Authentication in PHP](https://msdn.microsoft.com/en-us/library/dn632721.aspx)
-+ [Oz as Auth2 replacement](http://hueniverse.com/2015/09/19/auth-to-see-the-wizard-or-i-wrote-an-oauth-replacement/)
 + [The OAuth 2.0 Authorization Protocol (draft-ietf-oauth-v2-22)](http://tools.ietf.org/id/draft-ietf-oauth-v2-22.html)
 + [oauth3.net](http://oauth.net)
 + [BTCjam.com](http://btcjam.com)
++ [BTCjam API FAQ](https://btcjam.com/faq/api)
+
