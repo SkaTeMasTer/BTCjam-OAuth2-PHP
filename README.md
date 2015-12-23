@@ -17,16 +17,7 @@ The world's largest bitcoin peer-to-peer lending marketplace. Where borrowers ge
 RFC 6749: "The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing the third-party application to obtain access on its own behalf." (October 2012)
 
 
-
-
- 
-
-
-### What is OAuth2?
-OAuth version 2.0 endpoints are used to create web server applications that use the OAuth2 authorization procedure to access APIs. The protocol allows users to share specific data with an application while keeping their usernames, passwords, and other information private. 
-
-### Why should I not use Google API Client Libraries?
-The complexity of the OAuth2 Authorization protocol implementation in the [Google API Client Library for PHP](https://github.com/google/google-api-php-client) is too great, it contains over a dozen class files, it's a totally complete protocol, not suited to access average OAuth2 API servers that a lot of developers is interested in.
+### Why should I not use an OAuth API PHP SDK or Library (like Google's)?
 
 Some issues include:
 + Interoperability prohibits just creating great products
@@ -44,20 +35,13 @@ All web applications that use OAuth2 must have credentials that identify the app
 To obtain web application credentials for your project, complete these steps:
 
    1. Visit the web site of the API provider and open the [BTCjam API Settings page](https://btcjam.com/oauth/applications).
-   2. Enter a name for this endpoint. (anything is fine)
+   2. Enter a name for this endpoint.
    3. Enter a Redirect URI, which handles responses from the OAuth2 server.
  
-### Loading the Auth2 client library via the callback URL
-Depending on how your app is structured you can use this callback in a number of ways, including:
-+ Setting your Public API access key.
-+ Letting the rest of your app know that the library has loaded and ready for use.
-+ Logging in the user for API’s which require OAuth login credentials.
-+ Checking that cached OAuth login credentials are still valid.
-+ Loading the customized OAuth2 API libraries your app will use.
-
-
-### Using OAuth2 for Web Server Applications
-,,,
+### Using $_SESSION to store 'access_token'...
+The standard expiration timeout of the Session state is no long lived.
+In order to retain permission to access the API, or to use it outside a web browser interface, you need to save the token to local disc or database.  When the Session expires, the access_token is normally lost and the application redirects to the authorization endpoint again.  
+We need to add code to cache the 'access_token'!
 
 
 
