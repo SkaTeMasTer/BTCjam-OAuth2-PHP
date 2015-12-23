@@ -64,7 +64,7 @@ Depending on how your app is structured you can use this callback in a number of
 
 ### References
 
-
++ Knp University's [OAuth2 in 8 Steps](https://knpuniversity.com/screencast/oauth/)
 + [Google Developers OAuth2 Protocol](https://developers.google.com/identity/protocols/OAuth2)
 + [MSDN: Server Side OAuth Authentication in PHP](https://msdn.microsoft.com/en-us/library/dn632721.aspx)
 + [The OAuth 2.0 Authorization Protocol (draft-ietf-oauth-v2-22)](http://tools.ietf.org/id/draft-ietf-oauth-v2-22.html)
