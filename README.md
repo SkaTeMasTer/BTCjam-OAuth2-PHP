@@ -16,6 +16,17 @@ The world's largest bitcoin peer-to-peer lending marketplace. Where borrowers ge
 ### What is the OAuth protocol?
 RFC 6749: "The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing the third-party application to obtain access on its own behalf." (October 2012)
 
+The uses cases covered by the framework are:
+* Web-server applications
+* Browser-based applications
+* Mobile apps
+* Username and password access
+* Application access
+
+In all these uses cases, the goal of the OAuth2 protocol is to exchange a token string between the Client and the Resource Server. This token is used to authenticate all the API calls using the Authorization HTTP header. Below is reported an example of the Bearer token (RFC 7650), the most used token type of OAuth2:
+
+> Authorization: Bearer RsT5OjbzRn430zqMLgV3Ia
+
 
 ### Why should I not use an OAuth API PHP SDK or Library (like Google's)?
 
