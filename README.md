@@ -50,13 +50,14 @@ To obtain web application credentials for your project, complete these steps:
    3. Enter a Redirect URI, which handles responses from the OAuth2 server.
  
 ### Using $_SESSION to store 'access_token'...
-The standard expiration timeout of the Session state is no long lived.
-In order to retain permission to access the API, or to use it outside a web browser interface, you need to save the token to local disc or database.  When the Session expires, the access_token is normally lost and the application redirects to the authorization endpoint again.  
-We need to add code to cache the 'access_token'!
+The standard expiration timeout of the Session state is not long lived.
+In order to retain permission to access the API, or to use it outside a web browser interface, we save the token to local file (/tmp/php_session_btcjam.txt).  
+When the Session expires, the access_token is normally lost and the application redirects to the authorization endpoint again.  By caching the 'access_token' we can avoid this and have a long session!
 
 
 
 ### History
++ Jan-03-2016: v1.01 - added SESSION caching to file.
 + Dec-21-2015: v1.00 released. 
 + Dec-15-2015: init repo. 
 
