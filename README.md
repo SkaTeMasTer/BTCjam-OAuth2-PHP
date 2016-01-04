@@ -10,7 +10,7 @@ This repo contains a library that is a simpler sub-set implementation of the [RF
 
 ### What is BTCjam?
 
-The world's largest bitcoin peer-to-peer lending marketplace. Where borrowers get great rates and Investors get great returns.
+[BTCjam.com](https://btcjam.com/?r=b4724761-bfdc-4bb5-90f9-f8c34bc8c7de&utm_medium=direct&utm_source=referral_url&utm_campaign=undefined) is the world's largest bitcoin peer-to-peer lending marketplace. Where borrowers get great rates and Investors get great returns.  It has been around for years and is very reliable.
 
 
 ### What is the OAuth protocol?
@@ -64,7 +64,7 @@ When the Session expires, the access_token is normally lost and the application 
 
 ### BTCjam API Protocol References
 
-+ [BTCjam.com](http://btcjam.com)
++ [BTCjam.com](https://btcjam.com/?r=b4724761-bfdc-4bb5-90f9-f8c34bc8c7de&utm_medium=direct&utm_source=referral_url&utm_campaign=undefined)
 + [BTCjam API FAQ](https://btcjam.com/faq/api)
 
 
