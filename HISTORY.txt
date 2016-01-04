@@ -1,5 +1,10 @@
+# HISTORY FILE
+
+version 1.01, 01-03-2015
+----------------------
++ added SESSION caching to file: we save the 'access_token' in a writable location.  Default is to save to /tmp/ directory, which gets deleted upon reboot.  Ideally, create a local directory (ex: ./cache), give it the correct permissions and save file there.
 
 version 1.00, 10-21-2015
 ----------------------
-- initial commit.
++ initial commit.
  
