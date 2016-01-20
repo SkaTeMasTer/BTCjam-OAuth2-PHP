@@ -131,13 +131,13 @@ public function readCookie() {
         $fh = fopen (HTTP_COOKIE_FILENAME, 'r');
         $sessiondata = fread ($fh, 4096); 
         fclose ($fh);
-        session_decode($sessiondata); 
+        $access_token = session_decode($sessiondata); 
 
         if (DEBUG_MODE) 
             if (!empty($sessiondata)) echo "<p>[*] Found an access_token = " . $sessiondata . "</p>" . PHP_EOL;
             else echo "<p>Sorry, no access token found -- your SESSION has expired.</p>" . PHP_EOL;             
 
-    return $sessiondata;
+    return $access_token;
 }
 // -----------------------------------------------
 public function redirectToLoginPage() {
