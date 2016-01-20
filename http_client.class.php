@@ -6,7 +6,12 @@
 // | + Written by: Shawn Reimerdes (Leech Software)
 // | + Donate BTC to me: 1SHaWNgQaMKdwPMyZZWgLmD4HN1FUM4hg
 // ------------------------------------------------------------------------------------
+
+define('DEBUG_MODE', 1);
+
 define('TIMEOUT_MINUTES', 8);
+define('HTTP_USER_AGENT', "BTCjam-OAuth2-PHP/v1.00");
+define('HTTP_COOKIE_FILENAME', "/tmp/phpsession_btcjam.txt");
 
 class HttpClient {
 
@@ -16,12 +21,14 @@ class HttpClient {
      public $headers;
      public $query;
 
+
+
 // -----------------------------------------------
 public function __construct() {
       
          $this->ch = curl_init();
 
-         $headers["User-Agent"] = "BTCjam-OAuth2-PHP/v1.00";
+         $headers["User-Agent"] = HTTP_USER_AGENT;
 
          $connect_timeout_secs = (60 * TIMEOUT_MINUTES);
 
@@ -95,6 +102,7 @@ public function buildHttpQueryString($postData) {
 public function checkThrowErrorException($response) {
 
         if(FALSE === $response) {
+
             $curlErr = curl_error($this->ch);
             $curlErrNum = curl_errno($this->ch);
 
@@ -104,8 +112,41 @@ public function checkThrowErrorException($response) {
 
 }
 // -----------------------------------------------
+public function createCookie($access_token) {
 
+         if (DEBUG_MODE) echo "<p>[*] Saving cookie -- creating file to cache access_token (" . HTTP_COOKIE_FILENAME . ") ...</p>" . PHP_EOL;
+                           
+         $session_data = session_encode(); 
+         $fh = fopen (HTTP_COOKIE_FILENAME, 'w+');       
+         fwrite ($fh, $session_data); 
+         fclose ($fh);
 
 }
+// -----------------------------------------------
+public function readCookie() {
 
+
+        if (DEBUG_MODE) echo "<p>[*] Loading access_token from cached file ...</p>" . PHP_EOL;
+                           
+        $fh = fopen (HTTP_COOKIE_FILENAME, 'r');
+        $sessiondata = fread ($fh, 4096); 
+        fclose ($fh);
+        session_decode($sessiondata); 
+
+        if (DEBUG_MODE) 
+            if (!empty($sessiondata)) echo "<p>[*] Found an access_token = " . $sessiondata . "</p>" . PHP_EOL;
+            else echo "<p>Sorry, no access token found -- your SESSION has expired.</p>" . PHP_EOL;             
+
+    return $sessiondata;
+}
+// -----------------------------------------------
+public function redirectToLoginPage() {
+
+        header('HTTP/1.1 302 Found');
+        header('Location: '. $apiConfig['authorizationUrlBase']);
+                    
+}
+
+// ---
+}
 ?>
